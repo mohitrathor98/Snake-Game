@@ -25,4 +25,16 @@ class Snake:
             new_y = self.snake[s_num-1].ycor()
             self.snake[s_num].goto(new_x, new_y)
         # 1st square moves forward    
-        self.snake[0].forward(MOVE_DISTANCE)            
+        self.snake[0].forward(MOVE_DISTANCE)     
+        
+    def up(self):
+        pass
+    
+    def down(self):
+        pass
+    
+    def left(self):
+        pass
+    
+    def right(self):
+        pass       
