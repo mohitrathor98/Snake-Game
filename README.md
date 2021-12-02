@@ -1,6 +1,8 @@
 # Snake-Game
 Snake Game made using Python-Turtle package
 
+(Incomplete Project)
+
 Requirements:
 
 1) Python3
