@@ -1,5 +1,6 @@
-from turtle import Turtle, Screen
+from turtle import Screen
 import time
+from food import Food
 
 from snake import Snake
 
@@ -15,8 +16,8 @@ TODO:
 
 -- Create a snake body == done
 -- Move the snake == done
--- control the snake
--- create snake food
+-- control the snake == done
+-- create snake food == done
 -- detect collision with food
 -- create a scoreboard
 -- detect collision with wall
@@ -25,6 +26,7 @@ TODO:
 '''
 
 snake = Snake()
+food = Food()
 
 screen.listen()
 screen.onkey(snake.up, "Up")
@@ -40,7 +42,6 @@ while game_is_on:
     time.sleep(0.1)
 
     snake.move()
-
 
 
 screen.exitonclick()
