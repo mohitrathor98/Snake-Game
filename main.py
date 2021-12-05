@@ -18,7 +18,7 @@ TODO:
 -- Move the snake == done
 -- control the snake == done
 -- create snake food == done
--- detect collision with food
+-- detect collision with food == done
 -- create a scoreboard
 -- detect collision with wall
 -- detect collision with tail
@@ -42,6 +42,13 @@ while game_is_on:
     time.sleep(0.1)
 
     snake.move()
+    
+    # detect snake food
+    # snake's head is 20*20 in dimension
+    # so, we are taking 15 pixels distance 
+    # between snake and food as collision
+    if snake.head.distance(food) < 15:
+        food.refresh()
 
 
 screen.exitonclick()
