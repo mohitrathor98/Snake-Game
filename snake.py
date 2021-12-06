@@ -17,13 +17,19 @@ class Snake:
         
     def create(self):
         for pos in INTIAL_COORDINATES:
-            s = Turtle("square")
-            s.color("white")
-            s.penup()
-            s.goto(pos)
-            
-            self.snake.append(s)
+            self.add_segment(pos)
         
+    def add_segment(self, position):
+        s = Turtle("square")
+        s.color("white")
+        s.penup()
+        s.goto(position)
+        self.snake.append(s)
+    
+    def extend(self):
+        # extends body of snake
+        self.add_segment(self.snake[-1].position())
+    
             
     def move(self):
         
