@@ -21,7 +21,7 @@ TODO:
 -- create snake food == done
 -- detect collision with food == done
 -- create a scoreboard == done
--- detect collision with wall
+-- detect collision with wall == done
 -- detect collision with tail
 
 '''
@@ -53,6 +53,12 @@ while game_is_on:
         food.refresh()
         cur_score += 1
         score.write_score(cur_score)
+
+    # detect collision with wall
+    # here assuming after 290 px, snake will hit the wall
+    if snake.head.xcor() > 290 or snake.head.xcor() < -290 or snake.head.ycor() > 290 or snake.head.ycor() < -290:
+        game_is_on = False
+        score.game_over()
 
 
 screen.exitonclick()
