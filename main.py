@@ -22,7 +22,7 @@ TODO:
 -- detect collision with food == done
 -- create a scoreboard == done
 -- detect collision with wall == done
--- detect collision with tail
+-- detect collision with tail == done
 
 '''
 
@@ -62,8 +62,10 @@ while game_is_on:
         score.game_over()
         
     # detect collision with tail
-    for segment in snake.snake[1:]:
-        if snake.head.distance(segment) < 10:
+    for segment in snake.snake:
+        if snake.head == segment:
+            pass
+        elif snake.head.distance(segment) < 10:
             game_is_on = False
             score.game_over()
 
